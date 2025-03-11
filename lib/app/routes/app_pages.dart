@@ -6,8 +6,12 @@ import '../modules/authentication/bindings/authentication_binding.dart';
 import '../modules/authentication/views/authentication_view.dart';
 import '../modules/clients_page/bindings/clients_page_binding.dart';
 import '../modules/clients_page/views/clients_page_view.dart';
+import '../modules/documents/bindings/documents_binding.dart';
+import '../modules/documents/views/documents_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/integrations/bindings/integrations_binding.dart';
+import '../modules/integrations/views/integrations_view.dart';
 import '../modules/inventory/inventory_adjustments/bindings/inventory_adjustments_binding.dart';
 import '../modules/inventory/inventory_adjustments/views/inventory_adjustments_view.dart';
 import '../modules/inventory/item_groups/bindings/item_groups_binding.dart';
@@ -20,6 +24,8 @@ import '../modules/purchases/purchase_orders/bindings/purchase_orders_binding.da
 import '../modules/purchases/purchase_orders/views/purchase_orders_view.dart';
 import '../modules/purchases/vendors/bindings/vendors_binding.dart';
 import '../modules/purchases/vendors/views/vendors_view.dart';
+import '../modules/reports/bindings/reports_binding.dart';
+import '../modules/reports/views/reports_view.dart';
 import '../modules/sales/customers/bindings/customers_binding.dart';
 import '../modules/sales/customers/views/customers_view.dart';
 import '../modules/sales/sales_orders/bindings/sales_orders_binding.dart';
@@ -95,6 +101,21 @@ class AppPages {
       page: () => const PurchaseOrdersView(),
       binding: PurchaseOrdersBinding(),
     ),
+    GetPage(
+      name: _Paths.INTEGRATIONS,
+      page: () => const IntegrationsView(),
+      binding: IntegrationsBinding(),
+    ),
+    GetPage(
+      name: _Paths.REPORTS,
+      page: () => const ReportsView(),
+      binding: ReportsBinding(),
+    ),
+    GetPage(
+      name: _Paths.DOCUMENTS,
+      page: () => const DocumentsView(),
+      binding: DocumentsBinding(),
+    ),
   ];
 }
 
@@ -143,6 +164,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(VendorsView());
     case purchaseOrdersPageRoute:
       return _getPageRoute(PurchaseOrdersView());
+    case integrationsPageRoutes:
+      return _getPageRoute(IntegrationsView());
+    case reportsPageRoutes:
+      return _getPageRoute(ReportsView());
+    case documentsPageRoutes:
+      return _getPageRoute(DocumentsView());
     case clientsPageRoute:
       return _getPageRoute(const ClientsPageView());
     default:

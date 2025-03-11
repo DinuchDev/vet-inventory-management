@@ -16,6 +16,9 @@ abstract class Routes {
   static const SALES_ORDERS = _Paths.SALES_ORDERS;
   static const VENDORS = _Paths.VENDORS;
   static const PURCHASE_ORDERS = _Paths.PURCHASE_ORDERS;
+  static const INTEGRATIONS = _Paths.INTEGRATIONS;
+  static const REPORTS = _Paths.REPORTS;
+  static const DOCUMENTS = _Paths.DOCUMENTS;
 }
 
 abstract class _Paths {
@@ -33,6 +36,9 @@ abstract class _Paths {
   static const SALES_ORDERS = '/sales-orders';
   static const VENDORS = '/vendors';
   static const PURCHASE_ORDERS = '/purchase-orders';
+  static const INTEGRATIONS = '/integrations';
+  static const REPORTS = '/reports';
+  static const DOCUMENTS = '/documents';
 }
 
 ///costume rootRoute always check for latest updates...
@@ -70,6 +76,15 @@ const vendorsPageRoute = "/vendors";
 
 const purchaseOrdersPageDisplayName = "Purchase Orders";
 const purchaseOrdersPageRoute = "/purchase-orders";
+
+const integrationsPageDisplayName = "Integrations";
+const integrationsPageRoutes = "/integrations";
+
+const reportsPageDisplayName = "Reports";
+const reportsPageRoutes = "/reports";
+
+const documentsPageDisplayName = "Documents";
+const documentsPageRoutes = "/documents";
 
 const clientsPageDisplayName = "Clients";
 const clientsPageRoute = "/clients-page";

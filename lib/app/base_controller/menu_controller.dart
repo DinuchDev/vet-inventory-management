@@ -41,6 +41,12 @@ class MenuController extends GetxController {
         return _customIcon(Icons.home, itemName);
       case inventoryDropDownDisplayName:
         return _customIcon(Icons.stroller_rounded, itemName);
+      case integrationsPageDisplayName:
+        return _customIcon(Icons.integration_instructions_outlined, itemName);
+      case reportsPageDisplayName:
+        return _customIcon(Icons.trending_up, itemName);
+      case documentsPageDisplayName:
+        return _customIcon(Icons.newspaper, itemName);
       case clientsPageDisplayName:
         return _customIcon(Icons.people_alt_outlined, itemName);
       case authenticationPageDisplayName:
@@ -88,8 +94,12 @@ List<MenuItem> sideMenuItemRoutes = [
   ]),
   MenuItem(purchasesPageDisplayName, purchasesPageRoute, subMenuItems: [
     MenuItem("Vendors", vendorsPageRoute, icon: Icons.add_box_rounded),
-    MenuItem("Purchase Orders", purchaseOrdersPageRoute, icon: Icons.add_box_rounded),
+    MenuItem("Purchase Orders", purchaseOrdersPageRoute,
+        icon: Icons.add_box_rounded),
   ]),
+  MenuItem(integrationsPageDisplayName, integrationsPageRoutes),
+  MenuItem(reportsPageDisplayName, reportsPageRoutes),
+  MenuItem(documentsPageDisplayName, documentsPageRoutes),
   MenuItem(clientsPageDisplayName, clientsPageRoute),
   MenuItem(authenticationPageDisplayName, authenticationPageRoute),
 ];
