@@ -78,7 +78,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.INVENTORY_ADJUSTMENTS,
-      page: () => const InventoryAdjustmentsView(),
+      page: () => InventoryAdjustmentsView(),
       binding: InventoryAdjustmentsBinding(),
     ),
     GetPage(
