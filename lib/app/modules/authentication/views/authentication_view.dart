@@ -9,6 +9,7 @@ import '../controllers/authentication_controller.dart';
 
 class AuthenticationView extends GetView<AuthenticationController> {
   const AuthenticationView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,9 +22,13 @@ class AuthenticationView extends GetView<AuthenticationController> {
             children: [
               Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 12),
-                    child: Image.asset("assets/icons/vet_logo.png"),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(24),
+                    child: Image.asset(
+                      "assets/icons/vet_logo.png",
+                      width: 100,
+                      height: 100,
+                    ),
                   ),
                   Expanded(child: Container()),
                 ],
@@ -78,26 +83,25 @@ class AuthenticationView extends GetView<AuthenticationController> {
                 children: [
                   Row(
                     children: [
-                      Checkbox(value: true, onChanged: (value){}),
-                      const CustomText(text: "Remember Me",),
+                      Checkbox(value: true, onChanged: (value) {}),
+                      const CustomText(
+                        text: "Remember Me",
+                      ),
                     ],
                   ),
-                  const CustomText(
-                      text: "Forgot password?",
-                      color: active
-                  )
+                  const CustomText(text: "Forgot password?", color: active)
                 ],
               ),
               const SizedBox(
                 height: 15,
               ),
               InkWell(
-                onTap: (){
+                onTap: () {
                   Get.offAllNamed(rootRoute);
                 },
                 child: Container(
-                  decoration: BoxDecoration(color: active,
-                      borderRadius: BorderRadius.circular(20)),
+                  decoration: BoxDecoration(
+                      color: active, borderRadius: BorderRadius.circular(20)),
                   alignment: Alignment.center,
                   width: double.maxFinite,
                   padding: const EdgeInsets.symmetric(vertical: 16),
@@ -107,17 +111,16 @@ class AuthenticationView extends GetView<AuthenticationController> {
                   ),
                 ),
               ),
-
               const SizedBox(
                 height: 15,
               ),
-
-              RichText(text: const TextSpan(
-                  children: [
-                    TextSpan(text: "Do not have admin credentials? "),
-                    TextSpan(text: "Request Credentials! ", style: TextStyle(color: active))
-                  ]
-              ))
+              RichText(
+                  text: const TextSpan(children: [
+                TextSpan(text: "Do not have admin credentials? "),
+                TextSpan(
+                    text: "Request Credentials! ",
+                    style: TextStyle(color: active))
+              ]))
             ],
           ),
         ),
