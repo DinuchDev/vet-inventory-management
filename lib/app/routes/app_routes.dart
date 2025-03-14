@@ -19,6 +19,17 @@ abstract class Routes {
   static const INTEGRATIONS = _Paths.INTEGRATIONS;
   static const REPORTS = _Paths.REPORTS;
   static const DOCUMENTS = _Paths.DOCUMENTS;
+  static const PACKAGES = _Paths.PACKAGES;
+  static const SHIPMENTS = _Paths.SHIPMENTS;
+  static const INVOICES = _Paths.INVOICES;
+  static const SALES_RECEIPTS = _Paths.SALES_RECEIPTS;
+  static const PAYMENTS_RECEIVED = _Paths.PAYMENTS_RECEIVED;
+  static const SALES_RETURNS = _Paths.SALES_RETURNS;
+  static const CREDIT_NOTES = _Paths.CREDIT_NOTES;
+  static const PURCHASES_RECEIVES = _Paths.PURCHASES_RECEIVES;
+  static const BILLS = _Paths.BILLS;
+  static const PAYMENTS_MADE = _Paths.PAYMENTS_MADE;
+  static const VENDOR_CREDITS = _Paths.VENDOR_CREDITS;
 }
 
 abstract class _Paths {
@@ -39,6 +50,17 @@ abstract class _Paths {
   static const INTEGRATIONS = '/integrations';
   static const REPORTS = '/reports';
   static const DOCUMENTS = '/documents';
+  static const PACKAGES = '/packages';
+  static const SHIPMENTS = '/shipments';
+  static const INVOICES = '/invoices';
+  static const SALES_RECEIPTS = '/sales-receipts';
+  static const PAYMENTS_RECEIVED = '/payments-received';
+  static const SALES_RETURNS = '/sales-returns';
+  static const CREDIT_NOTES = '/credit-notes';
+  static const PURCHASES_RECEIVES = '/purchases-receives';
+  static const BILLS = '/bills';
+  static const PAYMENTS_MADE = '/payments-made';
+  static const VENDOR_CREDITS = '/vendor-credits';
 }
 
 ///costume rootRoute always check for latest updates...
@@ -68,6 +90,27 @@ const customersPageRoute = "/customers";
 const salesOrdersPageDisplayName = "Sales Orders";
 const salesOrdersPageRoute = "/sales-orders";
 
+const packagesPageDisplayName = "Packages";
+const packagesPageRoute = "/packages";
+
+const shipmentsPageDisplayName = "Shipments";
+const shipmentsPageRoute = "/shipments";
+
+const invoicesPageDisplayName = "Invoices";
+const invoicesPageRoute = "/invoices";
+
+const salesReceiptsPageDisplayName = "Sales Receipts";
+const salesReceiptsPageRoute = "/sales-receipts";
+
+const paymentsReceivedPageDisplayName = "Payments Received";
+const paymentsReceivedPageRoute = "/payments-received";
+
+const salesReturnsPageDisplayName = "Sales Returns";
+const salesReturnsPageRoute = "/sales-returns";
+
+const creditNotesPageDisplayName = "Credit Notes";
+const creditNotesPageRoute = "/credit-notes";
+
 const purchasesPageDisplayName = "Purchases";
 const purchasesPageRoute = "/purchases";
 
@@ -76,6 +119,18 @@ const vendorsPageRoute = "/vendors";
 
 const purchaseOrdersPageDisplayName = "Purchase Orders";
 const purchaseOrdersPageRoute = "/purchase-orders";
+
+const purchasesReceivesPageDisplayName = "Purchase Receives";
+const purchasesReceivesPageRoute = "/purchases-receives";
+
+const billsPageDisplayName = "Bills";
+const billsPageRoute = "/bills";
+
+const paymentsMadePageDisplayName = "Payments Made";
+const paymentsMadePageRoute = "/payments-made";
+
+const vendorCreditsPageDisplayName = "Vendor Credits";
+const  vendorCreditsPageRoute = "/vendor-credits";
 
 const integrationsPageDisplayName = "Integrations";
 const integrationsPageRoutes = "/integrations";

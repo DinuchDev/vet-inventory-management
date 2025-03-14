@@ -20,16 +20,38 @@ import '../modules/inventory/items/bindings/items_binding.dart';
 import '../modules/inventory/items/views/items_view.dart';
 import '../modules/notifications/bindings/notifications_binding.dart';
 import '../modules/notifications/views/notifications_view.dart';
+import '../modules/purchases/bills/bindings/bills_binding.dart';
+import '../modules/purchases/bills/views/bills_view.dart';
+import '../modules/purchases/payments_made/bindings/payments_made_binding.dart';
+import '../modules/purchases/payments_made/views/payments_made_view.dart';
 import '../modules/purchases/purchase_orders/bindings/purchase_orders_binding.dart';
 import '../modules/purchases/purchase_orders/views/purchase_orders_view.dart';
+import '../modules/purchases/purchases_receives/bindings/purchases_receives_binding.dart';
+import '../modules/purchases/purchases_receives/views/purchases_receives_view.dart';
+import '../modules/purchases/vendor_credits/bindings/vendor_credits_binding.dart';
+import '../modules/purchases/vendor_credits/views/vendor_credits_view.dart';
 import '../modules/purchases/vendors/bindings/vendors_binding.dart';
 import '../modules/purchases/vendors/views/vendors_view.dart';
 import '../modules/reports/bindings/reports_binding.dart';
 import '../modules/reports/views/reports_view.dart';
+import '../modules/sales/credit_notes/bindings/credit_notes_binding.dart';
+import '../modules/sales/credit_notes/views/credit_notes_view.dart';
 import '../modules/sales/customers/bindings/customers_binding.dart';
 import '../modules/sales/customers/views/customers_view.dart';
+import '../modules/sales/invoices/bindings/invoices_binding.dart';
+import '../modules/sales/invoices/views/invoices_view.dart';
+import '../modules/sales/packages/bindings/packages_binding.dart';
+import '../modules/sales/packages/views/packages_view.dart';
+import '../modules/sales/payments_received/bindings/payments_received_binding.dart';
+import '../modules/sales/payments_received/views/payments_received_view.dart';
 import '../modules/sales/sales_orders/bindings/sales_orders_binding.dart';
 import '../modules/sales/sales_orders/views/sales_orders_view.dart';
+import '../modules/sales/sales_receipts/bindings/sales_receipts_binding.dart';
+import '../modules/sales/sales_receipts/views/sales_receipts_view.dart';
+import '../modules/sales/sales_returns/bindings/sales_returns_binding.dart';
+import '../modules/sales/sales_returns/views/sales_returns_view.dart';
+import '../modules/sales/shipments/bindings/shipments_binding.dart';
+import '../modules/sales/shipments/views/shipments_view.dart';
 import '../modules/users/bindings/users_binding.dart';
 import '../modules/users/views/users_view.dart';
 
@@ -116,6 +138,61 @@ class AppPages {
       page: () => const DocumentsView(),
       binding: DocumentsBinding(),
     ),
+    GetPage(
+      name: _Paths.PACKAGES,
+      page: () => const PackagesView(),
+      binding: PackagesBinding(),
+    ),
+    GetPage(
+      name: _Paths.SHIPMENTS,
+      page: () => const ShipmentsView(),
+      binding: ShipmentsBinding(),
+    ),
+    GetPage(
+      name: _Paths.INVOICES,
+      page: () => const InvoicesView(),
+      binding: InvoicesBinding(),
+    ),
+    GetPage(
+      name: _Paths.SALES_RECEIPTS,
+      page: () => const SalesReceiptsView(),
+      binding: SalesReceiptsBinding(),
+    ),
+    GetPage(
+      name: _Paths.PAYMENTS_RECEIVED,
+      page: () => const PaymentsReceivedView(),
+      binding: PaymentsReceivedBinding(),
+    ),
+    GetPage(
+      name: _Paths.SALES_RETURNS,
+      page: () => const SalesReturnsView(),
+      binding: SalesReturnsBinding(),
+    ),
+    GetPage(
+      name: _Paths.CREDIT_NOTES,
+      page: () => const CreditNotesView(),
+      binding: CreditNotesBinding(),
+    ),
+    GetPage(
+      name: _Paths.PURCHASES_RECEIVES,
+      page: () => const PurchasesReceivesView(),
+      binding: PurchasesReceivesBinding(),
+    ),
+    GetPage(
+      name: _Paths.BILLS,
+      page: () => const BillsView(),
+      binding: BillsBinding(),
+    ),
+    GetPage(
+      name: _Paths.PAYMENTS_MADE,
+      page: () => const PaymentsMadeView(),
+      binding: PaymentsMadeBinding(),
+    ),
+    GetPage(
+      name: _Paths.VENDOR_CREDITS,
+      page: () => const VendorCreditsView(),
+      binding: VendorCreditsBinding(),
+    ),
   ];
 }
 
@@ -160,10 +237,32 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(CustomersView());
     case salesOrdersPageRoute:
       return _getPageRoute(SalesOrdersView());
+    case packagesPageRoute:
+      return _getPageRoute(PackagesView());
+    case shipmentsPageRoute:
+      return _getPageRoute(ShipmentsView());
+    case invoicesPageRoute:
+      return _getPageRoute(InvoicesView());
+    case salesReceiptsPageRoute:
+      return _getPageRoute(SalesReceiptsView());
+    case paymentsReceivedPageRoute:
+      return _getPageRoute(PaymentsReceivedView());
+    case salesReturnsPageRoute:
+      return _getPageRoute(SalesReturnsView());
+    case creditNotesPageRoute:
+      return _getPageRoute(CreditNotesView());
     case vendorsPageRoute:
       return _getPageRoute(VendorsView());
     case purchaseOrdersPageRoute:
       return _getPageRoute(PurchaseOrdersView());
+    case purchasesReceivesPageRoute:
+      return _getPageRoute(PurchasesReceivesView());
+    case billsPageRoute:
+      return _getPageRoute(BillsView());
+    case paymentsMadePageRoute:
+      return _getPageRoute(PaymentsMadeView());
+    case vendorCreditsPageRoute:
+      return _getPageRoute(VendorCreditsView());
     case integrationsPageRoutes:
       return _getPageRoute(IntegrationsView());
     case reportsPageRoutes:

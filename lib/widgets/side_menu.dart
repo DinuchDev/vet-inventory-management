@@ -25,8 +25,8 @@ class SideMenu extends StatelessWidget {
                   shape: Border(),
                   trailing: Icon(
                     menuController.expandedTile.value == item.name
-                        ? Icons.arrow_drop_up
-                        : Icons.arrow_drop_down,
+                        ? Icons.arrow_drop_down
+                        : Icons.arrow_right_outlined,
                     color: menuController.isExpanded(item.name)
                         ? Colors.indigo
                         : Colors.white,
@@ -75,7 +75,7 @@ class SideMenu extends StatelessWidget {
                               ),
                             ),
                             menuController.isActive(subItem.name)
-                                ? Icon(Icons.add_box_rounded, color: Colors.white)
+                                ? Icon(Icons.add_circle_rounded, color: Colors.white)
                                 : SizedBox.shrink()
                           ],
                         ),
