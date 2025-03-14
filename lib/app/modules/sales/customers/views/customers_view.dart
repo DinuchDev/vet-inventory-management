@@ -22,7 +22,12 @@ class CustomersView extends GetView<CustomersController> {
           ),
           TextButton(
             onPressed: () {},
-            style: TextButton.styleFrom(backgroundColor: Colors.blue),
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.blue,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(6), // Adjust the radius
+              ),
+            ),
             child: const Text(
               'CREATE NEW CUSTOMER',
               style: TextStyle(color: Colors.white),
