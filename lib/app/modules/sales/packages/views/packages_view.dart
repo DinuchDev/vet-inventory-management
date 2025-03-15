@@ -12,7 +12,34 @@ class PackagesView extends GetView<PackagesController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('All Packages')),
+      appBar: AppBar(
+        title: Text('All Packages'),
+        automaticallyImplyLeading: false,
+        actions: [
+          Row(
+            children: [
+              TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6), // Adjust the radius
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Icon(Icons.add, color: Colors.white),
+                    const Text(
+                      'NEW',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
