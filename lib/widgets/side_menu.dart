@@ -75,7 +75,8 @@ class SideMenu extends StatelessWidget {
                               ),
                             ),
                             menuController.isActive(subItem.name)
-                                ? Icon(Icons.add_circle_rounded, color: Colors.white)
+                                ? Icon(Icons.add_circle_rounded,
+                                    color: Colors.white)
                                 : SizedBox.shrink()
                           ],
                         ),

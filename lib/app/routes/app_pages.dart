@@ -140,7 +140,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.PACKAGES,
-      page: () => const PackagesView(),
+      page: () => PackagesView(),
       binding: PackagesBinding(),
     ),
     GetPage(
