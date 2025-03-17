@@ -15,7 +15,7 @@ class VendorsView extends GetView<VendorsController> {
           title: Row(
             children: [
               Text(
-                'All Received Payments',
+                'All Purchase Orders',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               Icon(
