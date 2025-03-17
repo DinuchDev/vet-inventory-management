@@ -64,7 +64,7 @@ class ShipmentsView extends GetView<ShipmentsController> {
       body: Column(
         children: [
           Container(
-            color: Colors.grey.withOpacity(0.3),
+            color: Colors.grey.withOpacity(0.1),
             height: 104,
             child: Column(
               children: [

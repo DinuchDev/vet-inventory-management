@@ -1,8 +1,7 @@
 import 'package:get/get.dart';
 
 class InvoicesController extends GetxController {
-  //TODO: Implement InvoicesController
-
+ var isChecked = false.obs;
   final count = 0.obs;
   @override
   void onInit() {
