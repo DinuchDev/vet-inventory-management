@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
 
 class ShipmentsController extends GetxController {
-  //TODO: Implement ShipmentsController
+  var statusFilter = 'All'.obs;
+  var typeFilter = 'All'.obs;
+  var isChecked = false.obs;
 
   final count = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
