@@ -1,8 +1,7 @@
 import 'package:get/get.dart';
 
 class BillsController extends GetxController {
-  //TODO: Implement BillsController
-
+var billList = 'All Bills'.obs;
   final count = 0.obs;
   @override
   void onInit() {
