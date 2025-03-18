@@ -71,44 +71,65 @@ class BillsView extends GetView<BillsController> {
               ],
             )
           ]),
-      body: Container(
-        color: Colors.grey.withOpacity(0.1),
-        width: double.infinity,
-        child: Row(
-          children: [
-            Text("VIEW BY: "),
-            Row(
+      body: Column(
+        children: [
+          Container(
+            color: Colors.grey.withOpacity(0.1),
+            width: double.infinity,
+            child: Row(
               children: [
-                DropdownButton<String>(
-                  underline: Container(),
-                  value: controller.billList.value,
-                  onChanged: (value) => controller.billList.value = value!,
-                  items: ['All Bills', 'cash', 'wing', 'aba']
-                      .map((e) => DropdownMenuItem(value: e, child: Text(e)))
-                      .toList(),
+                Text("VIEW BY: "),
+                Row(
+                  children: [
+                    DropdownButton<String>(
+                      underline: Container(),
+                      value: controller.billList.value,
+                      onChanged: (value) => controller.billList.value = value!,
+                      items: ['All Bills', 'cash', 'wing', 'aba']
+                          .map(
+                              (e) => DropdownMenuItem(value: e, child: Text(e)))
+                          .toList(),
+                    ),
+                  ],
                 ),
+                Spacer(),
+                Container(
+                    width: 24,
+                    height: 24,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(3), // Rounded corners
+                    ),
+                    child: Icon(Icons.more_vert_outlined)),
+                SizedBox(width: 8.0),
+                Container(
+                    width: 28,
+                    height: 24,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.4),
+                      borderRadius: BorderRadius.circular(3), // Rounded corners
+                    ),
+                    child: Icon(Icons.list_rounded)),
               ],
             ),
-            Spacer(),
-            Container(
-                width: 24,
-                height: 24,
-                decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(3), // Rounded corners
-                ),
-                child: Icon(Icons.more_vert_outlined)),
-            SizedBox(width: 8.0),
-            Container(
-                width: 28,
-                height: 24,
-                decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.4),
-                  borderRadius: BorderRadius.circular(3), // Rounded corners
-                ),
-                child: Icon(Icons.list_rounded)),
-          ],
-        ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(height: 120),
+              Text(
+                "Owe money? It's good to play bills on time!",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+              ),
+              Text(
+                  "If you\'ve purchase something for your business, and you don't have to repay it immediately, than you can record it as a bill"),
+              Text(
+                "Import Bills",
+                style: TextStyle(color: Colors.blue, fontSize: 12),
+              )
+            ],
+          )
+        ],
       ),
     );
   }
