@@ -22,10 +22,10 @@ class HomeView extends GetView<HomeController> {
                 height: 40,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/avatar-profile.png'),
-                    fit: BoxFit.cover,
-                  ),
+                  // image: DecorationImage(
+                  //   image: AssetImage('assets/images/avatar-profile.png'),
+                  //   fit: BoxFit.cover,
+                  // ),
                 ),
               ),
               Padding(
@@ -42,6 +42,7 @@ class HomeView extends GetView<HomeController> {
           ),
           actions: [IconButton(icon: Icon(Icons.notifications), onPressed: () {})],
           bottom: TabBar(
+            padding: EdgeInsets.all(8.0), // Set a valid padding value
             tabs: [
               Tab(text: 'Dashboard'),
               Tab(text: 'Getting Started'),
